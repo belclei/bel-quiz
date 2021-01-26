@@ -33,7 +33,10 @@ export default class MyDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <meta charSet="utf-8" />
-          <meta property="og:image" content={db.bg}></meta>
+          <meta property="og:image" content={db.bg} />
+          <meta property="og:image:type" content="image/jpeg" />
+          <meta property="og:image:width" content="800" />
+          <meta property="og:image:height" content="600" />
           <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
           <title>Bem vindo ao Bel Quiz</title>
         </Head>
