@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-
+import db from '../db.json'
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet()
@@ -33,8 +33,9 @@ export default class MyDocument extends Document {
       <Html lang="pt-br">
         <Head>
           <meta charSet="utf-8" />
-          <meta property="og:image" content="blob:https://vercel.com/e320071a-0bdf-4b94-afb9-a6fb25838801"></meta>
+          <meta property="og:image" content={db.bg}></meta>
           <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+          <title>Bem vindo ao Bel Quiz</title>
         </Head>
         <body>
           <Main />
